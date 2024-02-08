@@ -1,0 +1,20 @@
+<div class="container w-25">
+    <span class="text-primary">Update Goal for ID : {{ goalId }}</span>
+    <form [formGroup]="updateForm" (ngSubmit)="handleUpdateSubmit()">
+        <div class="mb-3">
+            <label for="goalName" class="form-label">Goal Name</label>
+            <input type="text" class="form-control" id="goalName" formControlName="goalName">
+        </div>
+        <div class="mb-3">
+            <label for="goalStatus" class="form-label">Goal Status</label>
+            <select class="form-select" id="goalStatus" formControlName="goalStatus">
+                <option value="Pending">Pending</option>
+                <option value="Done">Done</option>
+            </select>
+        </div>
+        <div class="button-group">
+            <button [disabled]="!updateForm.valid" type="submit" class="btn btn-primary">Submit</button>
+            <button (click)="cancelUpdate()" class="btn btn-light">Cancel</button>
+        </div>
+    </form>
+</div>

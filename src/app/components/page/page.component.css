@@ -1,0 +1,21 @@
+* {
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 40px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+th,
+td {
+    text-align: center;
+}
